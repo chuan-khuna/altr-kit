@@ -427,6 +427,10 @@ class PanZoom {
   }
   apply() {
     this.inner.style.transform = `translate(${this.tx}px, ${this.ty}px) scale(${this.scale})`;
+    // The stage's grid background pans and zooms with the diagram.
+    this.stage.style.setProperty("--grid-x", `${this.tx}px`);
+    this.stage.style.setProperty("--grid-y", `${this.ty}px`);
+    this.stage.style.setProperty("--grid-scale", this.scale);
     this.label.textContent = `${Math.round(this.scale * 100)}%`;
   }
   center() {
@@ -559,7 +563,6 @@ async function setupDiagrams(main) {
   });
   window.addEventListener("resize", () => { if (active) vPz.fit(); });
 
-  const mac = /Mac|iPhone|iPad/.test(navigator.platform);
   figs.forEach((fig, n) => {
     const source = (fig.querySelector(".mermaid-src")?.textContent || "").replace(/^\n+|\s+$/g, "");
     const title = fig.dataset.title || "";
@@ -567,8 +570,7 @@ async function setupDiagrams(main) {
 
     const bar = el(`<div class="diagram-bar"><span class="title"></span>${zoomControls()}<span class="sep"></span>${exportControls()}<span class="sep"></span>${button("expand", "Expand", "data-expand")}</div>`);
     bar.querySelector(".title").textContent = title;
-    const stage = el('<div class="diagram-stage"><div class="inner"></div><span class="diagram-hint"></span></div>');
-    stage.querySelector(".diagram-hint").textContent = mac ? "⌘ + scroll to zoom" : "Ctrl + scroll to zoom";
+    const stage = el('<div class="diagram-stage"><div class="inner"></div></div>');
     fig.prepend(bar, stage);
 
     const pz = new PanZoom(stage, stage.querySelector(".inner"), bar.querySelector(".zoom-level"), { wheelNeedsModifier: true });
