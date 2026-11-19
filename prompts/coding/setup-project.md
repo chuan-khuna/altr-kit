@@ -22,6 +22,10 @@ the shared HTML assets into docs/shared/:
   curl -fsSL -o docs/shared/globals.css https://raw.githubusercontent.com/chuan-khuna/altr-kit/main/assets/globals.css
   curl -fsSL -o docs/shared/doc.js https://raw.githubusercontent.com/chuan-khuna/altr-kit/main/assets/doc.js
 
+Also download the shared ruff config to the project root:
+
+  curl -fsSL -o ruff.toml https://raw.githubusercontent.com/chuan-khuna/altr-kit/main/tools/ruff.toml
+
 ## Project docs
 
 ### Documents
@@ -62,7 +66,8 @@ any open questions.
 ### Python
 
 Use `uv` for everything Python: `uv run <script>`, `uv add <pkg>`, `uv sync`. Run it
-instead of calling `python`, `pip` or `venv` directly.
+instead of calling `python`, `pip` or `venv` directly. Lint and format with ruff
+(`uvx ruff check`, `uvx ruff format`), configured by `ruff.toml` at the project root.
 
 ### Node
 
