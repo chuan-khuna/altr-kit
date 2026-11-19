@@ -2,7 +2,8 @@
 
 A prompt that sets up the Matt Pocock skills with local issues. It also adds a project-docs
 section to `CLAUDE.md`, which covers documents, HTML document rules and discussion records,
-and a tools section for Python (`uv`) and Node (`bun`).
+and a tools section for Python (`uv`) and Node (`bun`). It downloads the shared ruff config and
+sets up `.gitignore` from the shared template.
 
 **How to use:** copy the block below into a new session at the project root.
 
@@ -25,6 +26,12 @@ the shared HTML assets into docs/shared/:
 Also download the shared ruff config to the project root:
 
   curl -fsSL -o ruff.toml https://raw.githubusercontent.com/chuan-khuna/altr-kit/main/tools/ruff.toml
+
+Set up .gitignore from the shared template. If .gitignore is missing, save the template as
+.gitignore. If it exists, append only the template lines it lacks, under their section
+comments, and keep every existing line:
+
+  curl -fsSL https://raw.githubusercontent.com/chuan-khuna/altr-kit/main/tools/gitignore
 
 ## Project docs
 
