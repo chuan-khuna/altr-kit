@@ -369,7 +369,7 @@ a:hover {
   background: var(--surface);
   border: 1px solid var(--hl-med);
   border-radius: 6px;
-  box-shadow: 0 10px 30px color-mix(in oklch, var(--text) 18%, transparent);
+  box-shadow: 0 8px 24px oklch(0% 0 0 / 0.18);
 }
 .theme-menu[hidden] {
   display: none;
@@ -707,7 +707,26 @@ figure.diagram > figcaption {
   height: 420px;
   cursor: grab;
   touch-action: pan-y;
-  background: var(--base);
+  /* A grid: thin lines every 20px, stronger lines every 100px. doc.js moves and scales it with the diagram. */
+  --grid-line: color-mix(in oklch, var(--hl-high) 20%, transparent);
+  --grid-line-major: color-mix(in oklch, var(--hl-high) 40%, transparent);
+  --grid-x: 0px;
+  --grid-y: 0px;
+  --grid-scale: 1;
+  --grid-minor: calc(20px * var(--grid-scale));
+  --grid-major: calc(100px * var(--grid-scale));
+  background-color: var(--base);
+  background-image:
+    linear-gradient(to right, var(--grid-line-major) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line-major) 1px, transparent 1px),
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size:
+    var(--grid-major) var(--grid-major),
+    var(--grid-major) var(--grid-major),
+    var(--grid-minor) var(--grid-minor),
+    var(--grid-minor) var(--grid-minor);
+  background-position: var(--grid-x) var(--grid-y);
   /* Panning is a drag; never let it select the diagram's text. */
   user-select: none;
   -webkit-user-select: none;
@@ -729,14 +748,6 @@ figure.diagram > figcaption {
 .diagram-stage svg {
   display: block;
   max-width: none !important;
-}
-.diagram-hint {
-  position: absolute;
-  right: 8px;
-  bottom: 6px;
-  font-size: 11px;
-  color: var(--muted);
-  pointer-events: none;
 }
 .diagram-error {
   padding: 16px;
@@ -797,6 +808,19 @@ figure.diagram > figcaption {
 
 /* Mermaid `class <node> accent` marks a highlighted node. */
 .pele .pele-node.accent > :is(rect, path, polygon, circle, ellipse) { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 2px; }
+
+/* Edge labels sit on a soft, blurred patch of the page colour, so lines behind them fade out. */
+.pele .pele-edge-label > rect {
+  fill: color-mix(in oklch, var(--base) 85%, transparent);
+  filter: blur(2px);
+}
+/* Labels drawn as bare text get a blurred halo instead. */
+.pele text.pele-edge-label {
+  paint-order: stroke;
+  stroke: color-mix(in oklch, var(--base) 85%, transparent);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
 
 /* ---------- Toast ---------- */
 
