@@ -8,7 +8,7 @@ uv = "0.13"
 description = "Install the vendored agent skills"
 run = [
   "bunx skills add mattpocock/skills#v1.3.2",
-  "bunx skills add thananon/9arm-skills",
+  "bunx skills add thananon/9arm-skills --skill debug-mantra --skill scrutinize --skill post-mortem --skill management-talk",
   "bunx skills add cursor/plugins --skill unslop --skill technical-writing",
 ]
 
