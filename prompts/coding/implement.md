@@ -1,6 +1,22 @@
-/implement `@.scratch/<feature-slug>`
+# Implement tickets
 
-```
+Prompts that work through a feature's tickets one at a time, with a fresh subagent per ticket.
+
+**How to use:** pick a variant, copy its block, and replace `<feature-slug>` with the folder
+under `.scratch/`.
+
+| Variant | Use when |
+| --- | --- |
+| [A. With `/implement`, TDD and review](#a-with-implement-tdd-and-review) | You want tests written first and a `/code-review` pass on every ticket |
+| [B. Plain](#b-plain) | You want a faster run: implement, typecheck, test, commit |
+
+---
+
+## A. With `/implement`, TDD and review
+
+```text
+/implement @.scratch/<feature-slug>
+
 Implement every ticket in issues/, one at a time:
 
 - Spawn a fresh subagent for each ticket. Start one only after the previous one has finished.
@@ -16,7 +32,10 @@ Implement every ticket in issues/, one at a time:
 
 ---
 
-`@.scratch/<feature-slug>`
+## B. Plain
+
+```text
+@.scratch/<feature-slug>
 
 Implement every ticket, one at a time:
 
@@ -29,3 +48,4 @@ Implement every ticket, one at a time:
   List them at the end.
 - If a subagent gets blocked or tests fail, stop and tell me. Don't move on to the next ticket.
 - After each ticket, give me a one-line update: ticket, commit SHA, test result.
+```
