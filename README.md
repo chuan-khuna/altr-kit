@@ -2,7 +2,6 @@
 
 A collection of tool configs, code snippets and prompt snippets that I reuse across projects.
 
-- `.agents/skills/` — vendored agent skills, linked into `.claude/skills/`. Reinstall with `mise run skills`.
 - `prompts/` — prompts to paste into a session: `coding/` for project work, `generative/` for image generation (with example outputs).
 - `assets/` — shared CSS and JS for HTML documents (themes, code highlighting, diagrams, glossary cards). The setup prompt downloads them into a project's `docs/shared/`.
 - `tools/` — shared tool configs: `mise.toml` and `ruff.toml`.
