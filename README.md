@@ -8,7 +8,7 @@ A collection of tool configs, code snippets and prompt snippets that I reuse acr
 
 ## Coding prompts
 
-- [Set up a project](prompts/coding/setup-project.md) — sets up local-issue skills and adds project docs, HTML document rules, records and tool conventions to `CLAUDE.md`.
+- [Set up a project](prompts/coding/setup-project.md) — sets up local-issue skills and adds project docs, HTML document rules, records and tool conventions to `CLAUDE.md`. Includes a one-command variant that also installs mise tools and skills.
 - [Implement tickets](prompts/coding/implement.md) — works through a feature's tickets one at a time, with a fresh subagent per ticket.
 
 ## Tools
