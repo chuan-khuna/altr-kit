@@ -10,6 +10,11 @@
 - [Overflow isometric](https://www.overflow.design/isometric/) — Isometric line icons and illustrations in several styles, to copy or drag into your designs. Also offered as a Figma plugin and an MCP server. Some drawings are free; Pro is paid.
 - [ascii.rest](https://ascii.rest/) · [GitHub](https://github.com/bas3line/ascii) — Animated ASCII art for web pages (scenes, loaders, charts, type, shapes) with no dependencies. Use it with a script tag, a React or Astro component, a TypeScript `mount()` call, or `npx ascii.rest` in a terminal. Free (MIT).
 
+## Avatars
+
+- [open-bot-avatar](https://dominikscholz.github.io/open-bot-avatar/) · [GitHub](https://github.com/DominikScholz/open-bot-avatar) — Animated avatars for agents. You describe an avatar in JSON (one SVG shape plus eye positions), and the renderer draws it with states such as thinking, working and done. Renders to canvas, static SVG or CSS 3D, and has no dependencies. Comes with a web editor and a skill for making avatars with a chat model. Install with `pnpm add open-bot-avatar`. Free (MIT).
+- [bloub](https://bloub.vercel.app) · [GitHub](https://github.com/jeremy-prt/bloub) — SVG copy of the x.ai bot avatar: one shape that morphs through 14 states, with eyes that move on their own and no animation library. A Vue 3 app to customise it and animate it on a timeline, then export SVG, PNG, GIF or MP4. Run it from source; there is no npm package. Code is MIT, but the licence does not cover the copied x.ai design.
+
 ## UI components
 
 - [Componentry — Annotated Text](https://componentry.dev/docs/components/annotated-text) — A shadcn-style React component that draws hand-drawn marks (circle, underline, highlighter, box) around inline text and animates them in when they scroll into view. Install with `pnpm dlx shadcn@latest add @componentry/annotated-text`.
