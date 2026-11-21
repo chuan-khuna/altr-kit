@@ -5,6 +5,7 @@ A collection of tool configs, code snippets and prompt snippets that I reuse acr
 - `prompts/` — prompts to paste into a session: `coding/` for project work, `generative/` for image generation (with example outputs).
 - `assets/` — shared CSS and JS for HTML documents (themes, code highlighting, diagrams, glossary cards). The setup prompt downloads them into a project's `docs/shared/`.
 - `tools/` — shared tool configs: `mise.toml`, `ruff.toml` and a `gitignore` template.
+- `awesome/` — curated link lists, one file per category. Start at [awesome/README.md](awesome/README.md).
 
 ## Coding prompts
 
