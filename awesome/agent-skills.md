@@ -49,6 +49,10 @@ run = [
 - [kevintngo/statechart-art](https://github.com/kevintngo/statechart-art) — Example project, not a skill: four statecharts about a boba shop, checked in TLA+ and drawn as code-made art with a `/statechart` skill.
 - [lucasmarkes/hairline](https://github.com/lucasmarkes/hairline) · [site](https://hairline.lucasmarkes.com/skills) — A free (MIT) library of isometric line-drawing figures for the web, with two skills: hairline-create draws a new interactive figure from an idea as one HTML file, and hairline-adopt turns an SVG you already have into a similar interactive page.
 
+## Data visualization
+
+- [holtzy/dataviz-skills](https://github.com/holtzy/dataviz-skills) — Skills for chart code and design in d3, ggplot2 and Matplotlib, plus roast-my-chart, which reviews a finished chart and lists fixes.
+
 ## Other
 
 - [different-ai/openwork](https://github.com/different-ai/openwork) — Open-source desktop app, built on OpenCode, that lets agents work on your local files.
