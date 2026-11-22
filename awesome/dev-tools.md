@@ -23,6 +23,14 @@
 - [Driver.js](https://driverjs.com/) · [GitHub](https://github.com/kamranahmedse/driver.js) — Small, dependency-free JavaScript library for product tours, step-by-step guides and highlighting elements on a page. Free (MIT).
 - [Bencho](https://bencho.dev/) — Library of React components and micro-interactions (confetti, dock, toast stack and more) that you copy into your project. Some blocks are free; the rest need a paid Pro plan.
 
+## Typesetting
+
+- [Typst](https://typst.app/) · [GitHub](https://github.com/typst/typst) — Markup-based typesetting system, a faster and simpler alternative to LaTeX, with a built-in scripting language and a package registry. Compiles documents to PDF, PNG, SVG or HTML. The compiler and CLI are free and open source (Apache 2.0); on Windows, install with `winget install --id Typst.Typst`. The collaborative web editor has a free plan and a paid Pro plan.
+
+## Dev environment
+
+- [mise](https://mise.jdx.dev/) · [GitHub](https://github.com/jdx/mise) — One tool for a project's dev setup: installs and switches tool versions (Node, Python, Bun, Go and more, like asdf, nvm or pyenv), sets environment variables per directory, and runs tasks. All of it is set in a `mise.toml`, as in the snippet in [agent skills](agent-skills.md#misetoml). On Windows, install with `winget install jdx.mise`. Free (MIT).
+
 ## Frameworks
 
 - [Effect](https://effect.website/) · [GitHub](https://github.com/Effect-TS/effect) — TypeScript library for writing apps with typed errors, dependency injection, concurrency, retries and resource handling, plus a standard library (schema, streams, HTTP) built on the same model.

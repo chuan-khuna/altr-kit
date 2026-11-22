@@ -26,6 +26,9 @@ run = [
 
 - [anthropics/skills](https://github.com/anthropics/skills) — Anthropic's official skills, including doc-coauthoring and frontend-design.
 - [obsidianmd/obsidian-skills](https://github.com/obsidianmd/obsidian-skills) — Skills for working with Obsidian vaults, notes and formats.
+- [Karpathy — LLM wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) · [post](https://x.com/karpathy/status/2040470801506541998) — An idea file, not a skill: paste it into your agent and it builds a markdown wiki from your sources with you. You keep the raw sources; the agent writes and links summary, entity and concept pages, keeps an `index.md` and `log.md`, answers questions from the wiki, and checks it for contradictions and gaps. Suggests Obsidian for viewing it.
+- [narze — LLM wiki extended](https://gist.github.com/narze/2b963e5db600a52a394a9c965c21ac5b) — Fork of Karpathy's LLM wiki, also an idea file. Adds PARA folders (Projects, Areas, Resources, Archives), a `_tasks.md` in each project and area, an `inbox.md` for ideas, and a SessionEnd hook that saves agent session logs from other projects into the wiki. Keeps the rules in `AGENTS.md`, with a one-line `CLAUDE.md` that imports it. Has no ready-made templates or commands; you set it up with your agent.
+- [tw93/kami](https://github.com/tw93/kami) · [site](https://kami.tw93.fun) — Typesets documents from templates: one-pagers, long docs, letters, resumes, portfolios, slides, equity reports, changelogs, social cards and landing pages. Outputs PDF by default, plus PNG and editable PPTX. Install with `npx skills add tw93/kami -a claude-code codex cursor -g -y`. On Windows, run it in WSL. Code is MIT; one bundled font is free for personal use only.
 
 ## Frontend & Design
 

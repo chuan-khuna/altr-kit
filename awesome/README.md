@@ -4,6 +4,6 @@ Curated lists of tools and resources I use or want to try. One file per category
 
 - [Agent skills](agent-skills.md) — skill packs and agent tools for coding, documentation, frontend design, visual explainers and finance, plus a `mise.toml` snippet that installs the vendored ones.
 - [Web](web.md) — websites worth bookmarking, such as interactive learning playgrounds and team tools.
-- [Dev tools](dev-tools.md) — packages, frameworks and tools to build with: color palette and colormap makers, isometric illustrations, animated ASCII art, UI components and annotations, product tours, the Effect framework and UI sound effects.
+- [Dev tools](dev-tools.md) — packages, frameworks and tools to build with: color palette and colormap makers, isometric illustrations, animated ASCII art, UI components and annotations, product tours, Typst typesetting, the mise dev environment manager, the Effect framework and UI sound effects.
 - [Inspiration](inspiration.md) — sites to look at for ideas, starting with designer portfolios.
 - [Prompts](prompts.md) — ready-made prompts from other people, starting with image prompts.
