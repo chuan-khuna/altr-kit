@@ -5,6 +5,8 @@ section to `CLAUDE.md`, which covers documents, HTML document rules and discussi
 and a tools section for Python (`uv`) and Node (`bun`). They download the shared ruff config
 and set up `.gitignore` from the shared template.
 
+**Before you start:** install the plugins in [Set up the dev environment](setup-dev-environment.md).
+
 HTML documents load `docs/shared/globals.css` and `docs/shared/doc.js`. The prompts download
 them from this kit's `assets/` folder on GitHub (`chuan-khuna/altr-kit`, branch `main`).
 

@@ -9,10 +9,11 @@ A collection of tool configs, code snippets and prompt snippets that I reuse acr
 
 ## Coding prompts
 
+- [Set up the dev environment](prompts/coding/setup-dev-environment.md) — installs the pstack plugin at local, project or user scope.
 - [Set up a project](prompts/coding/setup-project.md) — sets up local-issue skills and adds project docs, HTML document rules, records and tool conventions to `CLAUDE.md`. Includes a one-command variant that also installs mise tools and skills.
 - [Implement tickets](prompts/coding/implement.md) — works through a feature's tickets one at a time, with a fresh subagent per ticket.
 
 ## Tools
 
-- [mise.toml](tools/mise.toml) — pinned tool versions (bun, just, node, uv) and tasks to install the agent skills (`mise run skills`) and the altr-skills plugin (`mise run plugins`).
+- [mise.toml](tools/mise.toml) — pinned tool versions (bun, just, node, uv) and tasks to install the agent skills (`mise run skills`) and, at local scope, the altr-skills plugin (`mise run plugins`) and pstack (`mise run pstack`).
 - [gitignore](tools/gitignore) — basic ignore rules for OS, editor, Python, Jupyter, Node, secret and Claude Code local files. The setup prompt merges it into a project's `.gitignore`.
