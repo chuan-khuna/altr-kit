@@ -13,9 +13,17 @@ run = [
 ]
 
 [tasks.plugins]
-description = "Install the local altr-skills plugin (altr-stack marketplace)"
+description = "Install the altr-skills plugin for this project only (altr-stack marketplace, local scope)"
 run = [
-  "claude plugin marketplace add chuan-khuna/altr-stack --scope project",
-  "claude plugin install altr-skills@altr-stack --scope project",
-  "claude plugin update altr-skills@altr-stack --scope project",
+  "claude plugin marketplace add chuan-khuna/altr-stack --scope local",
+  "claude plugin install altr-skills@altr-stack --scope local",
+  "claude plugin update altr-skills@altr-stack --scope local",
+]
+
+[tasks.pstack]
+description = "Install the pstack plugin for this project only (cursor-plugins marketplace, local scope)"
+run = [
+  "claude plugin marketplace add cursor/plugins --scope local",
+  "claude plugin install pstack@cursor-plugins --scope local",
+  "claude plugin update pstack@cursor-plugins --scope local",
 ]
